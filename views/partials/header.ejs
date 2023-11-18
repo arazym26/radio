@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="navbuttons">
+      <a href="/dj">DJ</a>
+      <a href="/producer">Producer</a>
+      <a href="/listener">Listener</a>
+      <a href="/logout">logout</a>
+    </div>
+    <div class="navsearch">
+      <form id="generalSearchForm" class="searchform" action="#" onsubmit="return generalSearch(this)">
+        <input name="generalSearchInput" type="text" placeholder="General search!" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <p style="margin: 5px">Currently playing: <%= currentSong %></p>
