@@ -1,14 +1,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><%= role %> View</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-
 <link rel="stylesheet" href="/style.css" />
-<link rel="stylesheet" href="/stylep.css" />
-<% if(role === "DJ") { %>
+<% if(role === "Producer") { %>
 <script>
-    var djs = <%-JSON.stringify(djsList);%>
-    var songs = <%-JSON.stringify(songList);%>
+    var djs = <%- JSON.stringify(djsList) %>;
+    var songs = <%- JSON.stringify(songList) %>;
 </script>
+<script src="/producer.js"></script>
 <% } %>
-<script src="/script.ejs"></script>
+
+<% if(role === "DJ") { %>
+    <script>
+        var djs = <%- JSON.stringify(djsList) %>;
+        var songs = <%- JSON.stringify(songList) %>;
+        var loggedInDJ = <%- JSON.stringify(djName) %>;
+    </script>
+    <script src="/dj.js"></script>
+<% } %>
