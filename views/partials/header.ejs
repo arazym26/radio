@@ -1,15 +1,16 @@
 <nav class="navbar">
-    <div class="navbuttons">
-      <a href="/dj">DJ</a>
-      <a href="/producer">Producer</a>
-      <a href="/listener">Listener</a>
-      <a href="/logout">logout</a>
-    </div>
-    <div class="navsearch">
-      <form id="generalSearchForm" class="searchform" action="#" onsubmit="return generalSearch(this)">
-        <input name="generalSearchInput" type="text" placeholder="General search!" />
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-  <p style="margin: 5px">Currently playing: <%= currentSong %></p>
+  <div class="navbuttons">
+    <a href="/dj">DJ</a>
+    <a href="/producer">Producer</a>
+    <a href="/listener">Listener</a>
+  </div>
+
+</nav>
+<script>
+  function darkMode() {
+    let element = document.body;
+    element.classList.toggle("dark");
+  }
+</script>
+
+<p style="margin: 5px">Currently playing: <%= currentSong %><button style="float:right;margin-right: 5px;margin-top: 5px;" id="modeButton" onclick="darkMode()">Dark/Light Mode</button><br><br></p>
