@@ -1,0 +1,199 @@
+/* Main font, adjust default spacing, default text to centered */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.dark {
+  color: white;
+  background-color: rgb(16, 54, 58);
+}
+
+#logindiv {
+  /*border: black 2px solid;*/
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgb(207, 230, 238);
+  margin: 50px;
+  padding: 20px;
+}
+
+/**/
+#songsearchinput, #logintext {
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgb(196, 196, 196);
+}
+
+/* Navigation bar container, uses flex */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Container for navigation buttons */
+.navbuttons {
+  width: 100%;
+  display: flex;
+}
+
+/* Each navigation button, uses a for simple linking */
+.navbar a, .btn {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 100%;
+  background-color: rgb(159, 211, 216);
+  /*border: black 2px solid;*/
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgb(207, 230, 238);
+}
+
+/* Container for navigation search */
+.navsearch {
+  display: flex;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+/* Change button styling to be consistent flat style */
+.navsearch button,
+#save, #loginbutton, #modeButton {
+  padding: 10px;
+  color: black;
+  background-color: rgb(159, 211, 216);
+  text-decoration: none;
+  /*border: black 1px solid;*/
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(207, 230, 238);
+}
+
+
+
+/* Search text, Keep consistent spacing and style */
+.navsearch input[type="text"] {
+  padding-left: 10px;
+  border: black 1px solid;
+}
+
+/* Remove navbar padding from song search, since using same class */
+.songsearch {
+  padding: 0;
+  margin: 0;
+}
+
+/* Make search inherit styling while keeping form functionality */
+.searchform {
+  display: inherit;
+  width: 100%;
+}
+
+/* Add border to navbar container */
+.navcontainer {
+  border: 0;
+  padding-bottom: 5px;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+/* Main content grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 10px;
+}
+
+/* Used as seperator / Title bar */
+hr {
+  border: 0;
+  margin: 5;
+}
+
+/* Titles for boxes */
+.title {
+ font-weight: bold;
+ margin: 5px;
+ padding: 5px;
+ border: 0;
+}
+
+/* Grid content arrangement */
+.djlist {
+  grid-area: 1 / 1 / 2 / 2;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+.timeslot {
+  grid-area: 1 / 2 / 2 / 3;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+.playlist {
+  grid-area: 2 / 1 / 3 / 3;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+.songadd {
+  grid-area: 1 / 3 / 3 / 4;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+
+/* DJ CSS */
+.djtimeslot {
+  grid-area: 1 / 1 / 3 / 2;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+.djplaylist {
+  grid-area: 1 / 2 / 3 / 2;
+  border: 0;
+  box-shadow: 0px 0px 10px 3px rgb(195, 223, 232);
+}
+
+
+/* Icon in each list item */
+.listicon {
+  float: right;
+  line-height: 1em;
+}
+
+/* Keeping list items centered */
+ul {
+  padding: 0;
+}
+
+/* List item styling */
+ul li {
+  display: block;
+  border: white 1px solid;
+}
+
+/* List item hover feedback */
+ul li:hover {
+  color: black;
+  background-color: #ddd;
+  border: black 1px solid;
+}
+
+.clicked {
+  color: black;
+  background-color: #a5a5a5;
+  border: black 1px solid;
+}
