@@ -1,51 +1,39 @@
 <h1>DJ View</h1>
-  <p>Choose a time-slot, and finalize the playlist!</p>
+<h3><%= djName %></h3>
+  <p>Modify the playlist for any of your timeslots below.</p>
   <div class="grid">
-    <div class="djlist">
-      DJ account
-      <hr />
-      <ul id="listofdjs">
-        <!-- DJs go here -->
-      </ul>
-    </div>
-    <div class="timeslot">
-      timeslots to oversee
+    <div class="djtimeslot">
+      <div class="title">Timeslot (MM/DD/YY)</div>
       <hr />
       <ul id="listoftimes">
         <!-- Times go here -->
       </ul>
     </div>
-    <div class="playlist">
-      DJ's Playlist
+    <div class="djplaylist">
+      <div class="title">Playlist</div>
       <hr />
       <ul id="listofsongs">
         <!-- Songs go here -->
-        <!-- <li>Chart Topper - Singer<span class="listicon">➖</span></li>
-        <li>Song 2 - Artist Man<span class="listicon">➖</span></li>
-        <li>Song Song - Singer 2<span class="listicon">➖</span></li>
-        <li>Another Song - Another Artist<span class="listicon">➖</span></li> -->
       </ul>
     </div>
     <div class="songadd">
+      <div class="title">Song Search</div>
+      <hr />
       <div class="navsearch songsearch">
         <form class="searchform" action="#">
           <input
             type="text"
             style="width: 100%"
+            class="songsearchinput"
             placeholder="Search for song name here!"
             id="songsearchinput"
           />
-          <button type="submit">Search</button>
         </form>
       </div>
       <ul id="searchsongs">
-        <!-- <li>Eternal Song <span class="listicon">➕</span></li>
-        <li>Song of Forever <span class="listicon">➕</span></li>
-        <li>Template Song <span class="listicon">➕</span></li>
-        <li>Song with no words...<span class="listicon">➕</span></li> -->
       </ul>
     </div>
   </div>
   <br />
-  <button id="save" onclick="alert('DJ: ' + selectedDJ + '\nTime: ' + selectedTime + '\nSongs:' + listPlaylist());outputPlaylist();">Save</button>
-  <body style="background-color:lightskyblue;"></body>
+  <button id="save" onclick="outputPlaylist();">Save</button>
+  <a class="btn" href="/logout">Log Out</a>
